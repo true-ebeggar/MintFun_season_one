@@ -155,12 +155,14 @@ def mint(private_key, logger):
             for key in private_keys:
                 keys_file.write(key + '\n')
 
-        logger.info(f"Transaction was successful. Txn hash: https://etherscan.io/tx/{txn_hash.hex()}")
+        logger.info(f"Transaction was successful:)")
+        logger.info(f"Txn hash: https://etherscan.io/tx/{txn_hash.hex()}")
         with open('successful_transactions.txt', 'a') as f:
             f.write(f'{address_checksum}, successful transaction, Txn hash: https://etherscan.io/tx/{txn_hash.hex()}\n')
         return 1
     else:
-        logger.warning(f"Transaction was unsuccessful. Txn hash: https://etherscan.io/tx/{txn_hash.hex()}")
+        logger.warning(f"Transaction was unsuccessful:(")
+        logger.warning(f"Txn hash: https://etherscan.io/tx/{txn_hash.hex()}")
         with open('failed_transactions.txt', 'a') as f:
             f.write(f'{address_checksum}, transaction failed, Txn hash: https://etherscan.io/tx/{txn_hash.hex()}\n')
         return 0

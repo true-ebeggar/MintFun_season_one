@@ -1,4 +1,4 @@
-🚀 **Ethereum Mint-Fun Season 1 Mint-Pass Script Guide** 🚀
+🚀 **Mint-Fun-Season-one-minter created by [BBC™](https://t.me/CryptoBub_ble)** 🚀
 
 🔥 **About**:
 Automate the minting of the first-season-pass on https://mint.fun. Simple, fast, and colorful!
