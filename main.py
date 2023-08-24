@@ -1,4 +1,3 @@
-import os
 import json
 import random
 import time
@@ -17,14 +16,14 @@ with open('private_keys.txt', 'r') as keys_file:
     private_keys = keys_file.read().splitlines()
 
 
-# DESIRED_GAS_PRICE = int(input("Enter the desired gas price (e.g., 15): "))
-# MIN_DELAY = int(input("Enter the minimum delay in seconds (e.g., 120): "))
-# MAX_DELAY = int(input("Enter the maximum delay in seconds (e.g., 240): "))
+DESIRED_GAS_PRICE = int(input("Enter the desired gas price (e.g., 15): "))
+MIN_DELAY = int(input("Enter the minimum delay in seconds (e.g., 120): "))
+MAX_DELAY = int(input("Enter the maximum delay in seconds (e.g., 240): "))
 
 USE_RAINBOW = True
-DESIRED_GAS_PRICE = 33
-MIN_DELAY = 120
-MAX_DELAY = 240
+# DESIRED_GAS_PRICE = 15
+# MIN_DELAY = 120
+# MAX_DELAY = 240
 
 def SetupGayLogger(logger_name, USE_RAINBOW_COLORS=USE_RAINBOW):
     """Set up logger with optional rainbow colors."""
