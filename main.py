@@ -80,11 +80,15 @@ def wait_for_gas_price_to_decrease(node_url, desired_gas_price):
 
         except requests.exceptions.HTTPError as errh:
             print(f"HTTP Error: {errh}")
-            time.sleep(10)  # Retry after 10 sec in case of a HTTP error
+            time.sleep(30)  # Retry after 30 sec in case of a HTTP error
             continue
         except requests.exceptions.ConnectionError as errc:
             print(f"Error Connecting: {errc}")
-            time.sleep(10)  # Retry after 10 sec in case of a connection error
+            time.sleep(30)  # Retry after 30 sec in case of a connection error
+            continue
+        except Exception as e:
+            print(f"HTTP Error: {e}")
+            time.sleep(30)  # Retry after 30 sec in case of a HTTP error
             continue
 
         if current_base_fee <= desired_gas_price:
